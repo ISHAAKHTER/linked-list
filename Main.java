@@ -14,12 +14,13 @@ public class Main {
         Node third=new Node(30);
         first.next=sec;
         sec.next= third;
+        third.next=first;
         Node current=first;
-        while (current!= null){
+        do{
             System.out.print(current.data +" -> ");
             current=current.next;
-        }
-        System.out.println("NULL");
+        }while (current!= first);
+        System.out.println("BACK TO HEAD");
     }
 
 }
